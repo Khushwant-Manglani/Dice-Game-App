@@ -1,38 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 .App {
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* HomePage style */
+
+.main-content {
+  /* border: 2px solid black;   */
+  margin: 8% 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dice-image {
+  max-width: 80%;
+  max-height: 80%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.right-content {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.game-heading {
+  font-size: 5rem;
+}
+
+.play-btn {
+  align-self: flex-end;
+  position: absolute;
+  bottom: 20px;
+}
+
+.play-btn .btn {
+  border: none;
+  color: white;
+  background-color: black;
+  padding: 0.6rem 3.5rem;
+  border-radius: 0.3rem;
+}
+
+.play-btn .btn:hover {
+  background-color: hsl(0, 0%, 20%);
+  cursor: pointer;
+  transition: 1s;
+}
+
+/* GamePage style */
+
+.game-page {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game-page-content {
+  /* border: 2px solid firebrick; */
+  margin: 0 4rem;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* position: relative; */
+}
+
+.top-score-box {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-between;
+  /* margin: 0rem 4rem 0% 4rem; */
+}
+
+.top-score-box .total-score {
+  /* border: 2px solid aqua; */
+  /* border: 2px solid black; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+
+.total-score .total-score-number {
+  font-size: 4rem;
+  margin: 0 0;
+}
+
+.total-score .total-score-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.top-score-box .dice-number-box {
+  /* border: 2px solid green; */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top-score-box .dice-number-box .dice-number-btns {
+  /* border: 2px solid orange; */
+  height: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-score-box .dice-number-box .dice-number-btns .dice-btn {
+  border: none;
+  padding: 1.2rem;
+  background-color: white;
+  font-weight: 800;
+  font-size: 1rem;
+  border: 2px solid black;
+}
+
+.top-score-box .dice-number-box .dice-number-btns .dice-btn:hover {
+  background-color: black;
   color: white;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
 }
 
-.App-link {
-  color: #61dafb;
+.top-score-box .dice-number-box .select-number {
+  align-self: flex-end;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dice-roll-box {
+  /* border: 2px solid darkblue; */
+  max-width: 15%;
+  margin: 0% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* position: absolute;
+  top: 23%;
+  left: 40%; */
+}
+
+.dice-roll-box .dice-box-top {
+  /* border: 2px solid darkcyan; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dice-roll-box .dice-box-top .dice-box-image {
+  display: flex;
+  justify-content: center;
+  /* margin-bottom: 5%; */
+}
+
+.dice-roll-box .dice-box-top .dice-box-image .dice-box-image-btn {
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10%;
+  padding: 10%;
+  cursor: pointer;
+}
+
+.dice-roll-box .dice-box-top .dice-box-image .dice-box-image-btn:hover {
+  transition: 1s;
+}
+
+.dice-roll-box .dice-box-top .dice-box-image .dice-box-image-btn .dice-image {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0%;
+}
+
+.dice-roll-box .dice-box-bottom {
+  padding: 10% 5% 0% 5%; 
+}
+
+.dice-roll-box .dice-box-bottom .dice-box-btn {
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.5rem 2.5rem;
+}
+
+.dice-roll-box .dice-box-bottom .reset-score-btn {
+  border: 1px solid black;
+  color: black;  
+  background-color: white;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.dice-roll-box .dice-box-bottom .reset-score-btn:hover {
+  color: white;  
+  background-color: black;
+  transition: 0.5s;
+}
+
+.dice-roll-box .dice-box-bottom .show-rules-btn {
+  color: white;  
+  background-color: black;
+  cursor: pointer;
+}
+
+.dice-roll-box .dice-box-bottom .show-rules-btn:hover {
+  border: 1px solid black;
+  color: black;  
+  background-color: white;
+  transition: 0.5s;
+}
+
+.game-page .game-rules-box {
+  background-color: hsl(0, 56%, 96%);
+  padding: 0.8rem;
+  margin: 0 auto;
+}
+
+.game-page .not-selected {
+  /* border: 2px solid brown; */
+  color: red;
+  display: flex;
+  justify-content: end;
+  margin: 1% 5% 1% 0;
 }
